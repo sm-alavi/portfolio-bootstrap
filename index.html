@@ -1,123 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./assets/css/mdb.min.css" rel="stylesheet" />
-    <link href="./assets/fontawesome/css/solid.css" rel="stylesheet" />
-    <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
-    <link href="./assets/css/main.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script src="./assets/js/htmx.min.js"></script>
-    <title>Mahdi Alavi CV</title>
-  </head>
 
-  <body>
-    <!--Default icon-->
-    <section class="mb-3">
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid d-flex justify-content-between">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="offcanvas"
-            href="#offcanvasExample"
-            role="button"
-            aria-controls="offcanvasExample"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./assets/css/mdb.min.css" rel="stylesheet" />
+  <link href="./assets/css/main.css" rel="stylesheet" />
+  <link href="./assets/fontawesome/css/solid.css" rel="stylesheet" />
+  <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="./assets/js/htmx.min.js"></script>
 
-          <div class="">Mahdi Alavi</div>
+  <title>Mahdi Alavi CV</title>
+</head>
 
-          <div>Potfolio</div>
-        </div>
-      </nav>
-    </section>
+<body hx-indicator="#spinner">
+  <!--Default icon-->
+  <section class="mb-3">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-between">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="offcanvas" href="#offcanvasExample" role="button"
+          aria-controls="offcanvasExample">
+          <i class="fas fa-bars"></i>
+        </button>
 
-    <main
-      id="main"
-      class="container-fluid p-2"
-      hx-get="./pages/home.html"
-      hx-swap="innerHTML"
-      hx-trigger="load"
-    ></main>
+        <div class="">Mahdi Alavi</div>
 
-    <div
-      class="offcanvas offcanvas-start"
-      tabindex="-1"
-      id="offcanvasExample"
-      aria-labelledby="offcanvasExampleLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menue</h5>
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-mdb-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+        <div>Potfolio</div>
       </div>
-      <div class="offcanvas-body">
-        <div>
-          <div class="list-group list-group-light">
-            <a
-              class="list-group-item list-group-item-action px-3 border-0 ripple"
-              role="button"
-              hx-get="./pages/home.html"
-              hx-swap="innerHTML"
-              hx-target="#main"
-            >
-              <i class="fas fa-home"></i> Home</a
-            >
-            <a
-              class="list-group-item list-group-item-action px-3 border-0 ripple"
-              hx-get="./pages/projects.html"
-              hx-swap="innerHTML"
-              hx-target="#main"
-            >
-              <i class="fas fa-home"></i>
-              <span class="fw-light fs-6">Projects</span></a
-            >
-            <a
-              class="list-group-item list-group-item-action px-3 border-0 ripple"
-              hx-get="./pages/education.html"
-              hx-swap="innerHTML"
-              hx-target="#main"
-              role="button"
-            >
-              <i class="fas fa-home"></i> Education</a
-            >
-            <a
-              class="list-group-item list-group-item-action px-3 border-0 ripple"
-              hx-get="./pages/skills.html"
-              hx-swap="innerHTML"
-              hx-target="#main"
-              role="button"
-            >
-              <i class="fas fa-home"></i> Skills</a
-            >
-            <a
-              href="#"
-              class="list-group-item list-group-item-action px-3 border-0 ripple"
-            >
-              <i class="fas fa-call"></i> Contact</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
+    </nav>
+  </section>
 
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/mdb.min.js"></script>
-  </body>
+  <div class="loader spinner-wheel htmx-indicator" id="spinner">
+  </div>
+
+  <main id="main" class="container-fluid p-2" hx-get="./pages/home.html" hx-swap="innerHTML" hx-trigger="load delay:1s">
+  </main>
+
+  <section id="sidebar" hx-get="./sidebar.html" hx-swap="innerHTML" hx-trigger="load"></section>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/mdb.min.js"></script>
+
+
+</body>
+
 </html>

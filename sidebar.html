@@ -1,0 +1,27 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+    style="max-width:200px;">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menue</h5>
+        <button type="button" class="btn-close text-reset" data-mdb-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            <div class="list-group list-group-light">
+                <a class="list-group-item list-group-item-action px-3 border-0 ripple" role="button"
+                    hx-get="./pages/home.html" hx-swap="innerHTML" hx-target="#main">
+                    Home</a>
+                <a class="list-group-item list-group-item-action px-3 border-0 ripple" hx-get="./pages/projects.html"
+                    hx-swap="innerHTML" hx-target="#main">
+                    <span class="fw-light fs-6">Projects</span></a>
+                <a class="list-group-item list-group-item-action px-3 border-0 ripple" hx-get="./pages/education.html"
+                    hx-swap="innerHTML" hx-target="#main" role="button">
+                    Education</a>
+                <a class="list-group-item list-group-item-action px-3 border-0 ripple" hx-get="./pages/skills.html"
+                    hx-swap="innerHTML" hx-target="#main" role="button">
+                    Skills</a>
+                <a href="#" class="list-group-item list-group-item-action px-3 border-0 ripple">
+                    Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
