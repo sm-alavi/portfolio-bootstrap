@@ -17,7 +17,7 @@
 
 <body hx-indicator="#spinner">
   <!--Default icon-->
-  <section class="mb-3">
+  <section class="">
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid d-flex justify-content-between">
         <button class="navbar-toggler" type="button" data-mdb-toggle="offcanvas" href="#offcanvasExample" role="button"
@@ -35,7 +35,7 @@
   <div class="loader spinner-wheel htmx-indicator" id="spinner">
   </div>
 
-  <main id="main" class="container-fluid p-2" hx-get="./pages/home.html" hx-swap="innerHTML" hx-trigger="load delay:1s">
+  <main id="main" class="" hx-get="./pages/home.html" hx-swap="innerHTML" hx-trigger="load delay:1s">
   </main>
 
   <section id="sidebar" hx-get="./sidebar.html" hx-swap="innerHTML" hx-trigger="load"></section>
