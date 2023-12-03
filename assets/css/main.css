@@ -142,16 +142,16 @@ body {
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
   overflow: hidden;
-  border-radius: 20px;
-  min-height: 450px;
+  border-radius: 10px;
+  max-height: 350px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
-    min-height: 350px;
+    max-height: 250px;
   }
 
   @media (max-width: 420px) {
-    min-height: 300px;
+    max-height: 200px;
   }
 
 }
@@ -233,4 +233,31 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.border-hover-effect {
+  --c: #2aa9b3; /* the border color */
+  --b: 5px;    /* the border thickness*/
+  --g: 5px;     /* the gap on hover */
+  
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%,var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+     var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+     0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+  transition: .3s, background-position .3s .3s;
+}
+.border-hover-effect:hover {
+  --_i: 100%;
+  transition: .3s, background-size .3s .3s;
+}
+
+.fade-me-in.htmx-added {
+  opacity: 0;
+}
+.fade-me-in {
+  opacity: 1;
+  transition: opacity 1s ease-out;
 }
