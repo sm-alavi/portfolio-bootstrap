@@ -7,9 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./assets/css/mdb.min.css" rel="stylesheet" />
   <link href="./assets/css/main.css" rel="stylesheet" />
-  <link href="./assets/fontawesome/css/solid.css" rel="stylesheet" />
-  <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="./assets/fontawesome/css/all.css" rel="stylesheet" />
   <script src="./assets/js/htmx.min.js"></script>
 
   <title>Mahdi Alavi CV</title>
@@ -17,20 +15,6 @@
 
 <body hx-indicator="#spinner">
   <!--Default icon-->
-  <section class="">
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid d-flex justify-content-between">
-        <button class="navbar-toggler" type="button" data-mdb-toggle="offcanvas" href="#offcanvasExample" role="button"
-          aria-controls="offcanvasExample">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="">Mahdi Alavi</div>
-
-        <div>Potfolio</div>
-      </div>
-    </nav>
-  </section>
 
   <div class="loader spinner-wheel htmx-indicator" id="spinner">
   </div>
@@ -38,15 +22,13 @@
   <main id="main" class="vh-100" hx-get="./pages/home.html" hx-swap="innerHTML" hx-trigger="load">
   </main>
 
-  <section id="sidebar" hx-get="./sidebar.html" hx-swap="innerHTML" hx-trigger="load"></section>
-
+  <section id="circular-menue" hx-get="./circular-menue.html" hx-swap="innerHTML" hx-trigger="load"></section>
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/mdb.min.js"></script>
-
 
 </body>
 

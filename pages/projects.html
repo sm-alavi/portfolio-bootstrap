@@ -1,15 +1,20 @@
-<div class="fade-me-in">
+<div class="fade-me-in" hx-get="./pages/education.html" hx-trigger="revealed"
+hx-swap="afterend">
     <!-- Tabs navs -->
-    <ul class="nav nav-tabs py-2 mb-3 d-flex justify-content-center text-white" id="ex1" role="tablist">
+    <ul class="nav nav-tabs mt-3 mb-4 d-flex justify-content-center text-white" id="ex1" role="tablist">
         <li class="nav-item" role="button">
-            <a class="nav-link fw-bold active" hx-get="./pages/projects-1.html" hx-swap="innerHTML" hx-target="#proj-tab-content" hx-trigger="load, click" id="proj-tab-1" role="tab">Petroleum Engineering</a>
+            <a class="nav-link fw-bold active" hx-get="./pages/projects-1.html" hx-swap="innerHTML"
+                hx-target="#proj-tab-content" hx-trigger="load, click" id="proj-tab-1" role="tab">Petroleum
+                Engineering</a>
         </li>
         <li class="nav-item" role="button">
-            <a class="nav-link fw-bold" hx-get="./pages/projects-2.html" hx-swap="innerHTML" hx-target="#proj-tab-content" hx-trigger="click" id="proj-tab-2" role="tab">Web Development</a>
+            <a class="nav-link fw-bold" hx-get="./pages/projects-2.html" hx-swap="innerHTML"
+                hx-target="#proj-tab-content" hx-trigger="click" id="proj-tab-2" role="tab">Web Development</a>
         </li>
 
         <li class="nav-item" role="button">
-            <a class="nav-link fw-bold" id="proj-tab-2" role="tab">Software and Web Development</a>
+            <a class="nav-link fw-bold" hx-get="./pages/projects-3.html" hx-swap="innerHTML"
+                hx-target="#proj-tab-content" id="proj-tab-3" role="tab">Software and Web Development</a>
         </li>
         <li class="nav-item" role="button">
             <a class="nav-link fw-bold" id="proj-tab-3" role="tab">Others</a>
@@ -20,7 +25,7 @@
 
     <!-- Tabs content -->
     <div class="tab-content py-1 px-2 " id="proj-tab-content">
-       
+
     </div>
     <!-- Tabs content -->
 </div>
