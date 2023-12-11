@@ -9,9 +9,10 @@
                         <h2>
                             Salt Scaling analysis
                         </h2>
-                        <a href="www.google.com" class="button">
-                            Find out more
-                        </a>
+                        <button hx-get="./pages/projects/project001.html" hx-swap="innerHTML" hx-trigger="click" hx-target="#modalContent" type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+                            Read More ...
+                          </button>
+
                     </div>
 
                 </div>
@@ -33,9 +34,7 @@
                     <h2>
                         Salt scaling analysi of oilfield water
                     </h2>
-                    <a href="www.google.com" class="button">
-                        Find out more
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -43,3 +42,11 @@
 
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content" id="modalContent">
+      </div>
+    </div>
+  </div>

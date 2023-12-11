@@ -335,7 +335,7 @@ body {
 }
 
 .pcard p,
-.pcard a {
+.pcard a, .pcard button {
   position: absolute;
   opacity: 0;
   max-width: 80%;
@@ -353,6 +353,12 @@ body {
   color: white;
 }
 
+.pcard button {
+  inset: auto auto 40px 30px;
+  text-decoration: none;
+ 
+}
+
 .pcard:hover h2 {
   background-color:#0000;
   inset: auto auto 220px 0px;
@@ -360,7 +366,7 @@ body {
 }
 
 .pacrd:hover p,
-.pcard:hover a {
+.pcard:hover a, .pcard:hover button {
   opacity: 1;
   transition: opacity .5s .1s ease-in;
 }
