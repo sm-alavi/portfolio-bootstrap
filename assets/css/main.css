@@ -301,88 +301,18 @@ body {
 }
 
 
-.pcard {
-  width: 20rem;
-  height: 22rem;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-}
-
-.pcard img {
-  position: absolute;
+.card-image {
+  height: 18rem;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
-  transition: opacity .2s ease-out;
-  filter:contrast(1.2) brightness(0.7);
-}
+  transition: filter 0.3s ease-in-out;
 
-.pcard h2 {
-  position: absolute;
-  inset: auto auto 30px 0px;
-  transition: inset .3s .3s ease-out;
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
 
 }
 
-.pcard p,
-.pcard a, .pcard button {
-  position: absolute;
-  opacity: 0;
-  max-width: 80%;
-  transition: opacity .3s ease-out;
+.card-image:hover{
+  filter: brightness(0.9) sepia(1.2) blur(1px);
+  transition: filter 0.3s ease-in-out;
 }
-
-.pcard p {
-  inset: auto auto 80px 10px;
-}
-
-.pcard a {
-  inset: auto auto 40px 30px;
-  color: inherit;
-  text-decoration: none;
-  color: white;
-}
-
-.pcard button {
-  inset: auto auto 40px 30px;
-  text-decoration: none;
- 
-}
-
-.pcard:hover h2 {
-  background-color:#0000;
-  inset: auto auto 220px 0px;
-  transition: inset .3s ease-out, background-color 0.3s ease;
-}
-
-.pacrd:hover p,
-.pcard:hover a, .pcard:hover button {
-  opacity: 1;
-  transition: opacity .5s .1s ease-in;
-}
-
-.pcard:hover img {
-  transition: opacity .3s ease-in;
-  opacity: 1;
-}
-
-
-
-.pcard .material-symbols-outlined {
-  vertical-align: middle;
-}
-
-
 
 .sidebar-item:hover {
   color: #006ac0;
