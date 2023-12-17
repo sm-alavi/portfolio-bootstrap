@@ -300,7 +300,17 @@ body {
   transition: opacity 1s ease-out;
 }
 
+.card{
+  border: 2px solid rgba(194, 190, 190, 0.3);
+  transition: border-style 0.5s ease-in-out;
 
+}
+
+.card:hover{
+  border-style: dashed;
+  transition: border-style 0.5s ease-in-out;
+  -moz-transition: border-style 0.5s ease-in-out;
+}
 .card-image {
   height: 18rem;
   object-fit: cover;
